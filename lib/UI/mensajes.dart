@@ -30,9 +30,9 @@ class _mensajesState extends State<mensajes> {
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(18),
-                    bottomLeft: Radius.circular(18),
-                    bottomRight: Radius.circular(18),
+                    topLeft: Radius.circular(20),
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
                   )),
                   child: Card(
                     elevation: 8,
@@ -40,37 +40,39 @@ class _mensajesState extends State<mensajes> {
                             respuesta.data!.docs[index].get('Email')
                         ? Color.fromARGB(255, 34, 58, 94)
                         : Color.fromARGB(255, 33, 132, 153),
-                    child: ListTile(
-                      title: Text(respuesta.data!.docs[index].get('Mensaje'),
-                          style: GoogleFonts.montserrat(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color:
+                    child: SizedBox(
+                      child: ListTile(
+                        title: Text(respuesta.data!.docs[index].get('Mensaje'),
+                            style: GoogleFonts.montserrat(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: (Autenticacion().usuario?.email)
+                                          .toString() ==
+                                      respuesta.data!.docs[index].get('Email')
+                                  ? Colors.grey[300]!
+                                  : Colors.grey[300]!,
+                            ),
+                            textAlign:
                                 (Autenticacion().usuario?.email).toString() ==
                                         respuesta.data!.docs[index].get('Email')
-                                    ? Colors.grey[300]!
-                                    : Colors.grey[300]!,
-                          ),
-                          textAlign:
-                              (Autenticacion().usuario?.email).toString() ==
+                                    ? TextAlign.right
+                                    : TextAlign.left),
+                        subtitle: Text(respuesta.data!.docs[index].get('Email'),
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: (Autenticacion().usuario?.email)
+                                          .toString() ==
                                       respuesta.data!.docs[index].get('Email')
-                                  ? TextAlign.right
-                                  : TextAlign.left),
-                      subtitle: Text(respuesta.data!.docs[index].get('Email'),
-                          style: GoogleFonts.montserrat(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                            color:
+                                  ? Colors.grey[300]!
+                                  : Colors.grey[300]!,
+                            ),
+                            textAlign:
                                 (Autenticacion().usuario?.email).toString() ==
                                         respuesta.data!.docs[index].get('Email')
-                                    ? Colors.grey[300]!
-                                    : Colors.grey[300]!,
-                          ),
-                          textAlign:
-                              (Autenticacion().usuario?.email).toString() ==
-                                      respuesta.data!.docs[index].get('Email')
-                                  ? TextAlign.right
-                                  : TextAlign.left),
+                                    ? TextAlign.right
+                                    : TextAlign.left),
+                      ),
                     ),
                   ),
                 ),
