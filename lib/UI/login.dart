@@ -35,6 +35,7 @@ class _loginState extends State<login> {
               scale: 1.8,
             )),
             TextField(
+                keyboardType: TextInputType.text,
                 controller: email,
                 decoration: InputDecoration(
                     suffixIcon: Icon(Icons.mail_rounded),
@@ -43,6 +44,7 @@ class _loginState extends State<login> {
                             fontSize: 14, fontWeight: FontWeight.w600)))),
             TextField(
                 maxLength: 8,
+                keyboardType: TextInputType.text,
                 obscureText: true, //ocultar texto
                 controller: password,
                 decoration: InputDecoration(
