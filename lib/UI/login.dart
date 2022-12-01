@@ -57,7 +57,7 @@ class _loginState extends State<login> {
             ),
             Container(
               padding: EdgeInsets.all(20),
-              height: 100,
+              height: 80,
               child: Row(
                 children: [
                   Expanded(
@@ -89,10 +89,48 @@ class _loginState extends State<login> {
                               fontSize: 14, fontWeight: FontWeight.w400)),
                       icon: Icon(Icons.arrow_forward_ios_rounded),
                     ),
+                  )),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(20),
+              height: 80,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      height: 40,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          Autenticacion().loginUser01(
+                              email: email.text, password: password.text);
+                        },
+                        label: Text("User 01",
+                            style: GoogleFonts.montserrat(
+                                fontSize: 14, fontWeight: FontWeight.w400)),
+                        icon: Icon(Icons.arrow_forward_ios_rounded),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                      child: Container(
+                    padding: EdgeInsets.only(left: 8.0),
+                    height: 40,
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        Autenticacion().loginUser02(
+                            email: email.text, password: password.text);
+                      },
+                      label: Text("User 02",
+                          style: GoogleFonts.montserrat(
+                              fontSize: 14, fontWeight: FontWeight.w400)),
+                      icon: Icon(Icons.arrow_forward_ios_rounded),
+                    ),
                   ))
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
