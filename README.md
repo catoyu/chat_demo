@@ -1,4 +1,14 @@
-# chat_demo
+## Reto 03: Chat_demo
+
+Proyecto desarrollado por: Alexander Anillo Trocha, Daniel Esteban Agudelo Duque, Heyder Barbosa Orrego, Lina Rocio Cardenas Fernandez y Yuly Andrea Castro Torres.
+
+Equipo 3 - NRC 2289
+
+Misión MinTic 2022
+
+## Demo:
+
+![Demo](https://user-images.githubusercontent.com/110750570/204960219-4afc6491-b15f-428d-a843-decd3446b2b1.gif)
 
 A new Flutter project.
 
